@@ -22,6 +22,7 @@ import matplotlib.pyplot as plt
 from sklearn.linear_model import LogisticRegression
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import roc_auc_score
+from sklearn.tree import DecisionTreeClassifier
 from sklearn.metrics import roc_curve
 import pandas as pd
 
@@ -69,7 +70,7 @@ print("Test length", len(X_test))
 # Now we fit the machine learning model we're going to use to our X and Y data.
 
 # %%
-model = LogisticRegression(C=1/0.1, solver="lbfgs").fit(X_train, Y_train)
+model = DecisionTreeClassifier().fit(X_train, Y_train)
 
 # %% [markdown]
 # ## Evaluate model
